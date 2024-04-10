@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import logo from "@/public/assets/logo.svg";
 import menu from "@/public/assets/menu.svg";
@@ -10,9 +10,26 @@ import { navLinks } from "@/constants";
 const Navbar = () => {
   const [active, setActive] = useState(" ");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="paddingX w-full flex items-center py-5 fixed top-0 z-20  ">
+    <nav
+      className={`paddingX w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      } `}>
       <div className="w-full flex justify-between items-center ">
         <Link
           href="/"
@@ -22,7 +39,9 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}>
           <Image src={logo} alt="logo" width={54} height={54} />
-          <p className="text-white ">Arnold Aswani</p>
+          <p className="text-white font-bold text-[18px] cursor-pointer ">
+            Arnold Aswani
+          </p>
         </Link>
 
         <div className="md:hidden">
