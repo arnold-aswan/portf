@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import herobg from "@/public/assets/herobg.png";
 import cont from "@/public/assets/cont.jpg";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
       </div>
       <About />
+      <Experience />
     </>
   );
 }
