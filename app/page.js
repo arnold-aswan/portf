@@ -4,6 +4,8 @@ import herobg from "@/public/assets/herobg.png";
 import cont from "@/public/assets/cont.jpg";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Tech from "@/components/Tech";
+import Work from "@/components/Work";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       </div>
       <About />
       <Experience />
+      <Tech />
+      <Work />
     </>
   );
 }
