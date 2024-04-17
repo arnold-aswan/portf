@@ -1,11 +1,10 @@
+
+
 import Image from "next/image";
-import Hero from "@/components/Hero";
+
+import { Hero, About, Experience, Work, Contact } from "@/components";
 import herobg from "@/public/assets/herobg.png";
 import cont from "@/public/assets/cont.jpg";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Tech from "@/components/Tech";
-import Work from "@/components/Work";
 
 export default function Home() {
   return (
@@ -14,17 +13,18 @@ export default function Home() {
         <Image
           src={herobg}
           alt="hero"
-          layout="fill"
-          objectFit="cover"
+          fill
           objectPosition="center"
-          className="bg-no-repeat"
+          className="bg-no-repeat object-cover"
         />
         <Hero />
       </div>
       <About />
       <Experience />
-      <Tech />
       <Work />
+      <div className="relative z-0">
+        <Contact />
+      </div>
     </>
   );
 }

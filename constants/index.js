@@ -1,9 +1,20 @@
 import web from "@/public/assets/web.png";
 import mobile from "@/public/assets/mobile.png";
 import backend from "@/public/assets/backend.png";
-// import { starbucks } from "@/public/assets/company/starbucks.png";
-import starbucks from "@/public/assets/starbucks.png";
-import car from "@/public/assets/projects/carrent.png";
+
+import { allpack, moringa, tecktick } from "@/public/assets/company";
+import { carhub, hilink, projectMgr, netflix } from "@/public/assets/projects";
+import {
+  css,
+  git,
+  html,
+  javascript,
+  react,
+  redux,
+  tailwind,
+  typescript,
+  python,
+} from "@/public/assets/tech";
 
 export const navLinks = [
   {
@@ -39,20 +50,25 @@ export const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "TeckTick",
-    icon: starbucks,
+    icon: tecktick,
     iconBg: "#383E56",
     date: "Feb 2024 - Present",
+
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implementing scalable React components, ensuring adherence to project requirements and industry best practices.",
+      "Utilizing front-end libraries such as Material UI and other UI libraries to improve the user interface and provide an intuitive user experience.",
+      "Collaborating closely with team members using Git and GitHub for version control and collaborative development.",
+      "Participating actively in code reviews to maintain code quality.",
+      "Build reusable code and libraries for future use, optimizing applications for maximum speed and scalability.",
+      "Designing and implementing database schemas, ensuring data integrity and efficient query performance.",
+      "Developing RESTful APIs and backend services using technologies such as Django and Postgresql.",
+      "Integrating frontend components with backend services, ensuring seamless data flow and application functionality.",
     ],
   },
   {
     title: "Full Stack Developer",
     company_name: "Moringa School",
-    icon: starbucks,
+    icon: moringa,
     iconBg: "#383E56",
     date: "May 2023 - Nov 2024",
     points: [
@@ -60,85 +76,121 @@ export const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+      "Integrating frontend components with backend services, ensuring seamless data flow and application functionality.",
     ],
   },
   {
     title: "IT Intern",
     company_name: "Allpack Industries ltd",
-    icon: starbucks,
+    icon: allpack,
     iconBg: "#383E56",
     date: "Jan 2019 - Apr 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Provided comprehensive technical support for computer operations, including troubleshooting and issue resolution.",
+      " Installed, modified, and repaired both software and hardware to address technical issues.",
+      " Offered expertise in problem resolution, suggesting patches and troubleshooting alternatives for hardware, software, and network-related issues.",
+      " Supported IT department in technology rollout and maintenance projects.",
+      " Contributed assessments to team-based IT projects.",
+      " Managed e-invoicing and archiving processes.",
+      " Provided remote or on-site support for management teams as required.",
+      " Assisted other departments as needed.",
+      " Prepared comprehensive ICT Documentation and reports.",
     ],
   },
 ];
 
 export const projects = [
   {
-    name: "Car Rent",
+    name: "Car Hub",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
-        name: "react",
+        name: "Nextjs",
         color: "blue-text-gradient",
       },
+
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: car,
-    source_code_link: "https://github.com/",
+    image: carhub,
+    source_code_link: "https://github.com/arnold-aswan/car-showcase",
+
+    demoUrl: "https://car-showcase-theta-seven.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Hilink Travel",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A travel Web application landing page that is built with NextJs, Tailwind CSS and Typescript.",
     tags: [
       {
-        name: "react",
+        name: "NextJs",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Typescript",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: car,
-    source_code_link: "https://github.com/",
+    image: hilink,
+    source_code_link: "https://github.com/arnold-aswan/travel-ui-ux",
+    demoUrl: "https://travel-ui-ux-olive.vercel.app/",
   },
   {
-    name: "Trip Guide",
+    name: "Netflix",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "React Vite",
         color: "blue-text-gradient",
       },
+
       {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: car,
-    source_code_link: "https://github.com/",
+    image: netflix,
+    source_code_link: "https://github.com/arnold-aswan/netflix_clone",
+    demoUrl: "https://netflix-clone-azure-mu.vercel.app/",
   },
+  {
+    name: "Project Manager",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "React Vite",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "Tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectMgr,
+    source_code_link:
+      "https://github.com/arnold-aswan/project-tracker-frontend",
+    demoUrl: "https://project-tracker-frontend-six.vercel.app/",
+  },
+];
+
+export const technologies = [
+  { name: "css", icon: css },
+  { name: "git", icon: git },
+  { name: "html", icon: html },
+  { name: "javascript", icon: javascript },
+  { name: "react", icon: react },
+  { name: "redux", icon: redux },
+  { name: "tailwind", icon: tailwind },
+  { name: "typescript", icon: typescript },
+  { name: "python", icon: python },
 ];
